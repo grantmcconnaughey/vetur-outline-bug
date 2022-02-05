@@ -1,13 +1,24 @@
 <template>
   <div>
-    {{ fo }}
+    {{ test }}
   </div>
 </template>
 
 <script>
-import * as _ from 'lodash'
-
 export default {
-  props: ['foo', 'bar']
+  props: ['foo', 'bar'],
+  data() {
+    return {
+      test: 'hello'
+    }
+  },
+  computed: {
+    test2() {
+      return this.test
+    }
+  },
+  mounted () {
+    console.log('mounted');
+  },
 }
 </script>
